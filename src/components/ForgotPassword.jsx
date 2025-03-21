@@ -13,6 +13,7 @@ const Container = styled.div`
 
 const Box = styled.div`
   position: relative;
+  font-family: 'Lexend', sans-serif;
   width: 100%;
   max-width: 600px;
   padding: 2rem;
@@ -56,12 +57,15 @@ const ContentWrapper = styled.div`
 
 const Title = styled.h2`
   color: #d1fa00;
+  font-family: 'Lexend',sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
 `;
 
 const Subtitle = styled.p`
   color: #bbb;
+  font-family: 'Lexend', sans-serif;
+  font-weight: lighter;
   font-size: 1rem;
   margin-bottom: 2rem;
 `;
@@ -72,33 +76,27 @@ const Form = styled.form`
   align-items: center;
 `;
 
-const Label = styled.label`
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #ccc;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto 0.5rem;
-`;
 
 const Input = styled.input`
   width: 100%;
   max-width: 400px;
-  padding: 0.75rem;
-  border-radius: 4px;
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  border-radius: 20px;
   border: 1px solid #333;
   background-color: #222;
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 `;
 
 const Button = styled.button`
+  width: 20rem;
+  //height: ;
   background-color: #d1fa00;
   color: #111;
   font-weight: bold;
   border: none;
   padding: 0.75rem 2rem;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
@@ -115,11 +113,10 @@ const ForgotPasswordContent = () => {
         <ContentWrapper>
           <Title>Forgot Password</Title>
           <Subtitle>
-            Forgot your password? Don’t worry, we’ll help you reset it.
+            Forgot your password ? Don’t worry, we’ll help you reset it.
           </Subtitle>
           <Form>
-            <Label htmlFor="email">Enter your Email</Label>
-            <Input type="email" id="email" placeholder="yourname@example.com" />
+            <Input type="email" id="email" placeholder="Enter your Email" />
             <Button type="submit">Send Mail</Button>
           </Form>
         </ContentWrapper>

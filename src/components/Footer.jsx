@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 
-// Import your icons:
+// Example icon imports:
 import mailIcon from "../assets/icon-mail.svg";
 import phoneIcon from "../assets/icon-phone.svg";
 import locationIcon from "../assets/icon-location.svg";
@@ -11,153 +11,139 @@ import twitterIcon from "../assets/icon-twitter.svg";
 import instaIcon from "../assets/icon-instagram.svg";
 import logo from "../assets/logo.svg";
 
-
 const FooterContainer = styled.footer`
-  background-color: #1c1c1c;
-  padding: 30px 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #1c1c1c;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #bbb;
 `;
 
-/*
-   The top portion: Bank logo, nav links,
-   and the contact row with horizontal line
-*/
 const TopSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
-  margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 30px;
 `;
 
 const Logo = styled.img`
-  height: 50px;
-  margin-bottom: 10px;
+    height: 50px;
+    margin-bottom: 10px;
 `;
 
-
 const NavLinks = styled.div`
-  display: flex;
-  gap: 30px;
+    display: flex;
+    gap: 30px;
 `;
 
 const NavItem = styled.a`
-  color: #d1fa00;
-  text-decoration: none;
-  font-weight: 500;
-  &:hover {
-    text-decoration: underline;
-  }
+    color: #E4E4E7;
+    text-decoration: none;
+    font-family: 'Lexend', sans-serif;
 `;
 
 const ContactRow = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  position: relative;
-  padding: 10px 0;
-  width: 100%;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: center;
 `;
 
-/*
-   This is the horizontal line with fading corners.
-   We'll use a pseudo-element for the line,
-   with a gradient so edges fade out.
-*/
 const HRContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  overflow: hidden;
-
-  &::before {
-    content: "";
     position: absolute;
+    top: 0;
     left: 0;
-    right: 0;
+    width: 100%;
     height: 1px;
-    background: linear-gradient(
-      to right,
-      transparent,
-      #262626,
-      transparent
-    );
-  }
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+                to right,
+                transparent,
+                #262626,
+                transparent
+        );
+    }
 `;
 
 const ContactItem = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #bbb;
-  font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #bbb;
+    font-size: 0.95rem;
 `;
 
 const ContactIcon = styled.img`
-  width: 18px;
-  height: 18px;
+    width: 18px;
+    height: 18px;
 `;
 
-/*
-   The capsule area: #1a1a1a background,
-   1px border #262626, 20px radius, containing
-   social icons, all rights reserved, T&C, etc.
-*/
 const CapsuleArea = styled.div`
-  background-color: #1a1a1a;
-  border: 1px solid #262626;
-  border-radius: 20px;
-  padding: 20px 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
+    background-color: #1a1a1a;
+    border: 1px solid #262626;
+    border-radius: 20px;
+    padding: 20px 30px;
+    display: flex;
+    /* 
+       We'll arrange social icons and text in a row,
+       so they're on the same horizontal level
+    */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
 `;
 
 const SocialIcons = styled.div`
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 `;
 
 const SocialIcon = styled.a`
-  width: 30px;
-  height: 30px;
-  display: block;
-  img {
-    width: 100%;
-    height: 100%;
-  }
+    width: 30px;
+    height: 30px;
+    display: block;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 `;
 
-const FooterRow = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  color: #bbb;
-  font-size: 0.9rem;
+// A container for the "All rights reserved" text, T&C, etc.
+const RightsRow = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    color: #bbb;
+    font-size: 0.9rem;
 `;
 
 const Divider = styled.span`
-  margin: 0 8px;
-  color: #444;
+    margin: 0 5px;
+    color: #444;
 `;
 
 const Footer = () => {
     return (
         <FooterContainer>
-            {/* Top section with logo, nav links, contact row */}
+            {/* Top section with bank name, nav links, contact row */}
             <TopSection>
-                {/* If you have a real logo file, you can <img src={logo} alt="YourBank" /> */}
                 <Logo src={logo} alt="YorkBank Logo" />
                 <NavLinks>
                     <NavItem href="#">Home</NavItem>
@@ -182,7 +168,7 @@ const Footer = () => {
                 </ContactRow>
             </TopSection>
 
-            {/* Capsule area for social icons & T&C */}
+            {/* Single row (CapsuleArea) with social icons + text on same horizontal level */}
             <CapsuleArea>
                 <SocialIcons>
                     <SocialIcon href="https://facebook.com">
@@ -196,13 +182,13 @@ const Footer = () => {
                     </SocialIcon>
                 </SocialIcons>
 
-                <FooterRow>
+                <RightsRow>
                     <span>YourBanK © All Rights Reserved</span>
                     <Divider>|</Divider>
                     <span>Privacy Policy</span>
                     <Divider>|</Divider>
                     <span>Terms of Service</span>
-                </FooterRow>
+                </RightsRow>
             </CapsuleArea>
         </FooterContainer>
     );

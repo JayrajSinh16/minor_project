@@ -9,6 +9,8 @@ const NavbarContainer = styled.nav`
     padding: 15px 50px;
     background: black;
     color: #d1fa00;
+    border-radius: 20px;
+    
 `;
 
 const Logo = styled.img`
