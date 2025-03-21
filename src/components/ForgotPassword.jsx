@@ -30,7 +30,7 @@ const BackgroundOverlay = styled.div`
   width: 100%;
   height: 100%;
   background: url(${backgroundImage}) center/cover no-repeat;
-  opacity: 0.3;
+  opacity: 1;
   z-index: 1;
 `;
 
@@ -42,7 +42,7 @@ const AbstractOverlay = styled.div`
   width: 200px;  /* adjust width as needed */
   height: 200px; /* adjust height as needed */
   background: url(${abstractImage}) center/contain no-repeat;
-  opacity: 0.3;
+  opacity: 1;
   z-index: 2;
 `;
 
