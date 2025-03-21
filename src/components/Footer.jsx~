@@ -164,7 +164,7 @@ const Footer = () => {
                     <HRContainer />
                 </ContactRow>
             </TopSection>
-
+<br/>
             <CapsuleArea>
                 <SocialIcons>
                     <SocialIcon href="https://facebook.com">

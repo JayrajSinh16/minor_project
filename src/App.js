@@ -4,13 +4,19 @@ import ForgotPassword from "./components/ForgotPassword";
 import Footer from "./components/Footer";
 
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <ForgotPassword />
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <div style={{
+                backgroundColor: "#101010",
+            }}>
+                <br/>
+                <Navbar/>
+                <ForgotPassword/>
+                <Footer/>
+            </div>
+        </>
+    );
 };
+
 
 export default App;
