@@ -3,13 +3,13 @@ import React from "react";
 import styled from "styled-components";
 
 // Example icon imports:
-import mailIcon from "../assets/icon-mail.svg";
-import phoneIcon from "../assets/icon-phone.svg";
-import locationIcon from "../assets/icon-location.svg";
-import fbIcon from "../assets/icon-facebook.svg";
-import twitterIcon from "../assets/icon-twitter.svg";
-import instaIcon from "../assets/icon-instagram.svg";
-import logo from "../assets/logo.svg";
+import mailIcon from "../assets/icons/icon-mail.svg";
+import phoneIcon from "../assets/icons/icon-phone.svg";
+import locationIcon from "../assets/icons/icon-location.svg";
+import fbIcon from "../assets/icons/icon-facebook.svg";
+import twitterIcon from "../assets/icons/icon-twitter.svg";
+import instaIcon from "../assets/icons/icon-instagram.svg";
+import logo from "../assets/icons/logo.svg";
 
 const FooterContainer = styled.footer`
     background-color: #1c1c1c;

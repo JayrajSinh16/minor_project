@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import ForgotPassword from "./components/ForgotPassword";
+import ForgotPassword from "./Pages/ForgotPassword";
 import Footer from "./components/Footer";
+import About from "./Pages/About";
 
 const App = () => {
     return (
@@ -11,7 +12,7 @@ const App = () => {
             }}>
                 <br/>
                 <Navbar/>
-                <ForgotPassword/>
+                <About/>
                 <Footer/>
             </div>
         </>

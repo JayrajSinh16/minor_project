@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/logo.svg"; // Import your SVG logo
+import logo from "../assets/icons/logo.svg"; // Import your SVG logo
 
 const NavbarContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 50px;
-    background: #1c1c1c;
+    background: #1a1a1a;
     color: #d1fa00;
     border-radius: 100px;
     border: 1px solid #262626;
