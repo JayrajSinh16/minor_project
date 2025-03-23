@@ -1,8 +1,6 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import ForgotPassword from "./Pages/ForgotPassword";
-import Footer from "./components/Footer";
 import About from "./Pages/About";
+import Forgot from "./Pages/Forgot";
 
 const App = () => {
     return (
@@ -10,10 +8,7 @@ const App = () => {
             <div style={{
                 backgroundColor: "#101010",
             }}>
-                <br/>
-                <Navbar/>
                 <About/>
-                <Footer/>
             </div>
         </>
     );

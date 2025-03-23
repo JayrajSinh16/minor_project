@@ -1,8 +1,8 @@
 // src/components/ForgotPasswordContent.jsx
 import React from "react";
 import styled from "styled-components";
-import backgroundImage from "../assets/abstract-design/background.png";
-import abstractImage from "../assets/abstract-design/abstract.png";
+import backgroundImage from "../../assets/abstract-design/background.png";
+import abstractImage from "../../assets/abstract-design/abstract.png";
 
 const Container = styled.div`
   display: flex;

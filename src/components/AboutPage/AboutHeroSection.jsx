@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import heroImage from "../assets/images/about-hero.png";
-import abstractImg from "../assets/abstract-design/abstract.png";
+import heroImage from "../../assets/images/about-hero.png";
+import abstractImg from "../../assets/abstract-design/abstract.png";
 
 const HeroContainer = styled.section`
     display: flex;

@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import missionImage from "../assets/images/mission.png";
-import visionImage from "../assets/images/hero.png";
-import abstractImg from "../assets/abstract-design/about-abstract.png";
+import missionImage from "../../assets/images/mission.png";
+import visionImage from "../../assets/images/hero.png";
+import abstractImg from "../../assets/abstract-design/about-abstract.png";
 
 const SectionContainer = styled.section`
     margin: auto auto 20px;
