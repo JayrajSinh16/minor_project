@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import heroImage from "../../assets/images/about-hero.png";
+import heroImage from "../../assets/images/SecurityIntro.png";
 import abstractImg from "../../assets/abstract-design/abstract.png";
 
 const HeroContainer = styled.section`
@@ -47,7 +47,7 @@ const ContentBox = styled.div`
 const TextSquare = styled.div`
     position: relative;
     width: 400px;
-    height: 350px;
+    height: 240px;
     background-color: #1a1a1a;
     border-radius: 20px 0 80px 20px;
     padding: 1.5rem;
@@ -58,7 +58,7 @@ const TextSquare = styled.div`
         color: #fff;
         font: inherit;
         font-size: 2rem;
-        font-weight:750 ;
+        font-weight: 750;
 
         span {
             color: #caff33;
@@ -81,32 +81,32 @@ const ImageSquare = styled.div`
 `;
 
 const HeroImg = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
 `;
 
 const AboutHeroSection = () => {
     return (
         <HeroContainer>
             <OuterSquare>
-                <AbstractOverlay />
+                <AbstractOverlay/>
                 <HeroRow>
                     <ContentBox>
                         <TextSquare>
-                            <p style={{ color: "#FFFFFF", fontSize: "1rem", marginBottom: "-1.5rem", fontWeight: "450", }}>
-                                Welcome to YourBank
-                            </p>
                             <h1>
-                                Where Banking Meets<br /> <span>Excellence!</span>
+                                Your Security is Our <br/> <span>Top Priority</span>
                             </h1>
-                            <p style={{ marginTop: "-1rem", fontSize: "0.9rem" }}>
-                                At YourBank, we believe that banking should be more than just transactions. It should be an experience that empowers individuals and businesses to thrive and reach their financial goals. As a trusted financial institution, we are committed to delivering exceptional banking services that go beyond expectations. With a focus on innovation, personalized solutions, and unwavering integrity, we strive to provide the best banking experience for our valued customers. Join us on this exciting journey and discover a new level of banking excellence.
+                            <p style={{marginTop: "-1rem", fontSize: "0.9rem"}}>
+                                At YourBank, we understand the importance of keeping your financial information secure.
+                                We employ robust security measures and advanced technologies to protect your personal
+                                and financial data. Rest assured that when you bank with us, your security is our utmost
+                                priority.
                             </p>
                         </TextSquare>
                         <ImageSquare>
-                            <HeroImg src={heroImage} alt="Hero" />
+                            <HeroImg src={heroImage} alt="Hero"/>
                         </ImageSquare>
                     </ContentBox>
                 </HeroRow>

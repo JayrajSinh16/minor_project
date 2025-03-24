@@ -49,6 +49,7 @@ const TextSquare = styled.div`
     width: 400px;
     height: 350px;
     background-color: #1a1a1a;
+    border: 1px solid #262626;
     border-radius: 20px 0 80px 20px;
     padding: 1.5rem;
     z-index: 2;

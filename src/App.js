@@ -1,6 +1,5 @@
 import React from "react";
-import About from "./Pages/About";
-import Forgot from "./Pages/Forgot";
+import Security from "./Pages/Security";
 
 const App = () => {
     return (
@@ -8,7 +7,7 @@ const App = () => {
             <div style={{
                 backgroundColor: "#101010",
             }}>
-                <About/>
+                <Security/>
             </div>
         </>
     );
