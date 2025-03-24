@@ -8,7 +8,7 @@ import fraudIcon from "../../assets/icons/fraud-icon.png";
 import mobileIcon from "../../assets/icons/mobile-icon.png";
 
 const SectionContainer = styled.section`
-    margin: auto;
+    margin: auto auto 40px;
     background-color: #1c1c1c;
     border-radius: 20px;
     padding: 40px 30px;
@@ -38,6 +38,7 @@ const InfoText = styled.p`
     text-align: left;
     font: inherit;
     font-size: 14px;
+    font-weight: lighter;
     margin-bottom: 0;
 `;
 

@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SecurityInfo from "../components/SecurityPage/SecurityInfo";
 import HowWeProtect from "../components/SecurityPage/HowWeProtect";
+import FrequentlyAskedQuestions from "../components/SecurityPage/FrequentlyAskedQuestions";
 
 const Security = () => {
     return (
@@ -12,6 +13,7 @@ const Security = () => {
             <Navbar></Navbar>
             <SecurityInfo></SecurityInfo>
             <HowWeProtect></HowWeProtect>
+            <FrequentlyAskedQuestions></FrequentlyAskedQuestions>
             <Footer></Footer>
         </>
     );
