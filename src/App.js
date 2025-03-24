@@ -1,5 +1,5 @@
 import React from "react";
-import Security from "./Pages/Security";
+import Profile from "./Pages/Profile";
 
 const App = () => {
     return (
@@ -7,7 +7,7 @@ const App = () => {
             <div style={{
                 backgroundColor: "#101010",
             }}>
-                <Security/>
+                <Profile></Profile>
             </div>
         </>
     );

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 import heroImage from "../../assets/images/SecurityIntro.png";
 import abstractImg from "../../assets/abstract-design/abstract.png";
 
