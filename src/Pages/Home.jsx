@@ -1,4 +1,4 @@
-// src/pages/Landing.jsx
+// src/pages/Home.jsx
 import React from "react";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
@@ -7,6 +7,9 @@ import abstractDesign from "../assets/abstract-design/abstract-landing-page.png"
 import WelcomeSection from "../components/LandingPage/WelcomeSection";
 import FeaturesSection from "../components/LandingPage/FeaturesSection";
 import FinancialJourneySection from "../components/LandingPage/FinancialJourneySection";
+import ProductSection from "../components/HomePage/ProductSection";
+import Usecase from "../components/HomePage/Usecase";
+import TestimonialsSection from "../components/HomePage/Testimonial";
 
 
 
@@ -21,18 +24,21 @@ const AbstractImage = styled.div`
   z-index: 0;
 `;
 
-const Landing = () => {
+const Home = () => {
     return (
         <>
             <br/>
-                <Navbar></Navbar>
-                <AbstractImage />
-                <WelcomeSection></WelcomeSection>
-                <FeaturesSection></FeaturesSection>
-                <FinancialJourneySection></FinancialJourneySection>
-                <Footer></Footer>
+            <Navbar></Navbar>
+            <AbstractImage />
+            <WelcomeSection></WelcomeSection>
+            <ProductSection></ProductSection>
+            <Usecase></Usecase>
+            <FeaturesSection></FeaturesSection>
+            <TestimonialsSection></TestimonialsSection>
+            <FinancialJourneySection></FinancialJourneySection>
+            <Footer></Footer>
         </>
     );
 };
 
-export default Landing;
+export default Home;

@@ -1,5 +1,5 @@
 import React from "react";
-import Landing from "./Pages/Landing";
+import Home from "./Pages/Home";
 
 const App = () => {
     return (
@@ -7,7 +7,7 @@ const App = () => {
             <div style={{
                 backgroundColor: "#101010",
             }}>
-                <Landing></Landing>
+                <Home></Home>
             </div>
         </>
     );
