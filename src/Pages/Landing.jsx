@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import abstractDesign from "../assets/abstract-design/abstract-landing-page.png";
 import WelcomeSection from "../components/LandingPage/WelcomeSection";
+import FeaturesSection from "../components/LandingPage/FeaturesSection";
+import FinancialJourneySection from "../components/LandingPage/FinancialJourneySection";
 
 
 
@@ -26,6 +28,8 @@ const Landing = () => {
                 <Navbar></Navbar>
                 <AbstractImage />
                 <WelcomeSection></WelcomeSection>
+                <FeaturesSection></FeaturesSection>
+                <FinancialJourneySection></FinancialJourneySection>
                 <Footer>
                 </Footer>
         </>
