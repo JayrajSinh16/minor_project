@@ -1,5 +1,5 @@
 import React from "react";
-import Profile from "./Pages/Profile";
+import Landing from "./Pages/Landing";
 
 const App = () => {
     return (
@@ -7,7 +7,7 @@ const App = () => {
             <div style={{
                 backgroundColor: "#101010",
             }}>
-                <Profile></Profile>
+                <Landing></Landing>
             </div>
         </>
     );
