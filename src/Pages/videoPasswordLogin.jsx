@@ -1,14 +1,15 @@
-// src/components/ForgotPasswordContent.jsx
+
 import React from "react";
 import styled from "styled-components";
-import backgroundImage from "../../assets/abstract-design/background.png";
-import abstractImage from "../../assets/abstract-design/abstract.png";
-import Navbar from "../Navbar";
+import backgroundImage from "../assets/abstract-design/background.png";
+import abstractImage from "../assets/abstract-design/abstract.png";
+import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
+  
   justify-content: center;
-  background-color: #101010; /* overall page background */
   height:100vh;
 `;
 
@@ -16,7 +17,7 @@ const Box = styled.div`
   position: relative;
   font-family: 'Lexend', sans-serif;
   width: 100%;
-  height: 300px;
+  height: 575px;
   max-width: 850px;
   padding: 1.5rem 2rem;
   border: 1px solid #262626; /* 1px stroke */
@@ -73,31 +74,39 @@ const Subtitle = styled.p`
   margin-bottom: 2rem;
 `;
 
-const Form = styled.form`
+const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 1.5rem; 
 `;
-
-
 const Input = styled.input`
   width: 100%;
   font: inherit;
   max-width: 500px;
   padding: 0.75rem 0.75rem 0.75rem 1rem;
-  border-radius: 20px;
+  border-radius: 150px;
   border: 1px solid #333;
   background-color: #222;
   color: #fff;
   margin-bottom: 1.5rem;
 `;
-
+const Video = styled.video`
+  width: 100%;
+  max-width: 100%; /* Full width */
+  min-height:300px
+  height: auto;
+  margin-bottom: 1.5rem;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid #333; /* Border for video */
+`;
 const Button = styled.button`
   width: 20rem;
   background-color: #CAFF33;
   color: #1c1c1c;
   font:inherit;
   border: none;
+  
   padding: 0.75rem 2rem;
   border-radius: 20px;
   cursor: pointer;
@@ -108,32 +117,46 @@ const Button = styled.button`
     border: 1px solid #CAFF33;
   }
 `;
+const ForgotPasswordLink = styled(Link)`
+  color: #BFBFBF;
+  text-decoration: underline;
+  margin-bottom: 1.5rem; 
+`;
 
-const ForgotPasswordContent = () => {
+
+
+
+
+const VideoPassword = () => {
   return (
     <>
-    <Container className="flex flex-col">
-    <div className="mt-5 mx-auto w-[85%]">
-    <Navbar />
-    </div>
-
+      <Navbar />
+      <Container>
         <Box>
-          <BackgroundOverlay />
+        <BackgroundOverlay />
           <AbstractOverlay />
           <ContentWrapper>
-            <Title>Forgot Password</Title>
-            <Subtitle>
-              Forgot your password ? Don’t worry, we’ll help you reset it.
-            </Subtitle>
-            <Form>
-              <Input type="email" id="email" placeholder="Enter your Email" />
-              <Button type="submit">Send Mail</Button>
-            </Form>
+          <Title>Video Password</Title>
+          <Subtitle>Welcome back! Please enter video password for your account.</Subtitle>
+          <div className="grid grid-cols-2 gap-x-3">          
+            <Video controls>
+            <source src="path_to_your_video.mp4" type="video/mp4" />
+          </Video>
+          <div className="my-auto w-[85%] mx-auto">
+          <InputWrapper>
+            <Input type="text" placeholder="Enter your Password" />
+            <ForgotPasswordLink to="/Forgot-password">Forgot Password?</ForgotPasswordLink>
+          </InputWrapper>
+          </div>
+          </div>
+
+          <Button type="submit">Done</Button>
           </ContentWrapper>
         </Box>
       </Container>
-      </>
+    </>
   );
-};
+}
 
-export default ForgotPasswordContent;
+export default VideoPassword;
+

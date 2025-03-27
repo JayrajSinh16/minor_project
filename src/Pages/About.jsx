@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 const About = () => {
     return (
         <>
-            <br/>
+            <br />
             <Navbar></Navbar>
             <AboutHeroSection />
             <MissionVision />
