@@ -40,7 +40,7 @@ const Title = styled.h2`
 const ProfileGrid = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 60px;
+    gap: 100px;
     align-items: start;
     position: relative;
     z-index: 1;
@@ -51,54 +51,76 @@ const ProfileImageContainer = styled.div`
 `;
 
 const ProfileImage = styled.img`
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     margin-bottom: 20px;
 `;
 
 const Button = styled.button`
     background-color: transparent;
-    color: #caff33;
+    color: #ffffff;
     border: 1px solid #caff33;
     border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
     font: inherit;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
     width: 100%;
 `;
 
 const Form = styled.form`
     display: flex;
+    width: 400px;
     flex-direction: column;
     gap: 20px;
+    
 `;
 
 const FormRow = styled.div`
     display: flex;
     gap: 20px;
+    justify-content: space-between;
 `;
 
 const Input = styled.input`
     flex: 1;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 14px;
+    border-radius: 50px;
     border: 1px solid #333;
     background-color: #1a1a1a;
     color: #b3b3b3;
-    width: 100%;
+`;
+const Input1 = styled(Input)`
+    width:90%;
 `;
 
-const FormButton = styled(Button)`
-    background-color: #caff33;
-    color: #262626;
-    border: none;
+
+const EditButton = styled(Button)`
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #caff33;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: lighter;
+    font-size: 14px;
+    margin-top: 10px;
+    width: 70%;
+`;
+const FormButton = styled(EditButton)`
+    
+    border: 1px solid #caff33;
     margin-top: 0;
     width: 150px;
 `;
+
+
+
+
 
 const ProfileContent = () => {
     return (
@@ -108,12 +130,12 @@ const ProfileContent = () => {
             <ProfileGrid>
                 <ProfileImageContainer>
                     <ProfileImage src={profileImage} alt="Profile" />
-                    <Button>Edit Profile Photo</Button>
+                    <EditButton>Edit Profile Photo</EditButton>
                 </ProfileImageContainer>
                 <Form>
                     <FormRow>
-                        <Input type="text" placeholder="First Name" />
-                        <Input type="text" placeholder="Last Name" />
+                        <Input1 type="text" placeholder="First Name" />
+                        <Input1 type="text" placeholder="Last Name" />
                     </FormRow>
                     <Input type="email" placeholder="Email" />
                     <Input type="password" placeholder="Password" />

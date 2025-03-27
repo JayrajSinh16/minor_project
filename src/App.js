@@ -1,4 +1,6 @@
 import React from "react";
+
+import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
 import About from "./Pages/About";
 import Security from "./Pages/Security";
@@ -10,13 +12,13 @@ import VideoPassword from "./Pages/videoPasswordLogin";
 import VideoPasswordSetup from "./Pages/VideoPasswordSetup";
 import VideoPasswordReset from "./Pages/VideoPasswordReset";
 
-
 const App = () => {
     return (
         <>
             <div style={{
                 backgroundColor: "#101010",
             }}>
+                <Home></Home>
                   
                  < BrowserRouter>
 
@@ -34,8 +36,6 @@ const App = () => {
 
     </Routes>
     </BrowserRouter>
-
-  
             </div>
         </>
     );
