@@ -1,4 +1,3 @@
-// src/pages/Security.jsx
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -9,7 +8,7 @@ import FrequentlyAskedQuestions from "../components/SecurityPage/FrequentlyAsked
 const Security = () => {
     return (
         <>
-            <br/>
+            
             <Navbar></Navbar>
             <SecurityInfo></SecurityInfo>
             <HowWeProtect></HowWeProtect>

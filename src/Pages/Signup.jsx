@@ -1,14 +1,19 @@
 // src/components/ForgotPasswordContent.jsx
 import React from "react";
 import styled from "styled-components";
-import backgroundImage from "../../assets/abstract-design/background.png";
-import abstractImage from "../../assets/abstract-design/abstract.png";
-import Navbar from "../Navbar";
+import backgroundImage from "../assets/abstract-design/background.png";
+import abstractImage from "../assets/abstract-design/abstract.png";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import faceImg from "../assets/icons/facebook-icon.png"
+import googleImg from "../assets/icons/Google-icon.png"
+import appleImg from "../assets/icons/apple-icon.png"
+import { Link } from "react-router";
 
 const Container = styled.div`
   display: flex;
+  
   justify-content: center;
-  background-color: #101010; /* overall page background */
   height:100vh;
 `;
 
@@ -16,7 +21,7 @@ const Box = styled.div`
   position: relative;
   font-family: 'Lexend', sans-serif;
   width: 100%;
-  height: 300px;
+  height: 575px;
   max-width: 850px;
   padding: 1.5rem 2rem;
   border: 1px solid #262626; /* 1px stroke */
@@ -75,8 +80,9 @@ const Subtitle = styled.p`
 
 const Form = styled.form`
   display: flex;
-  flex-direction: column;
   align-items: center;
+  margin-left: 2px;
+  margin: right: 2px;
 `;
 
 
@@ -85,7 +91,7 @@ const Input = styled.input`
   font: inherit;
   max-width: 500px;
   padding: 0.75rem 0.75rem 0.75rem 1rem;
-  border-radius: 20px;
+  border-radius: 150px;
   border: 1px solid #333;
   background-color: #222;
   color: #fff;
@@ -98,6 +104,7 @@ const Button = styled.button`
   color: #1c1c1c;
   font:inherit;
   border: none;
+  
   padding: 0.75rem 2rem;
   border-radius: 20px;
   cursor: pointer;
@@ -109,31 +116,56 @@ const Button = styled.button`
   }
 `;
 
-const ForgotPasswordContent = () => {
+const Signup = () => {
   return (
     <>
-    <Container className="flex flex-col">
-    <div className="mt-5 mx-auto w-[85%]">
+      <Container className="flex flex-col">
+    <div className="mt-5 mx-auto w-[95%]">
     <Navbar />
     </div>
-
-        <Box>
+  
+        <Box >
           <BackgroundOverlay />
           <AbstractOverlay />
           <ContentWrapper>
-            <Title>Forgot Password</Title>
+            <Title>Sign Up</Title>
             <Subtitle>
-              Forgot your password ? Don’t worry, we’ll help you reset it.
+            Join our community today! Create an account to unlock exclusive features and personalized experiences.
             </Subtitle>
-            <Form>
+            <Form className="flex  flex-col">
+              <div className="flex gap-4">
+              <Input type="first-name" id="name" placeholder="Enter your first name"  className="rounded-full"/>
+              <Input type="last-name" id="name" placeholder="Enter your last-name"  className="rounded-full"/>
+              </div>
+              <div className="flex gap-4">
               <Input type="email" id="email" placeholder="Enter your Email" />
-              <Button type="submit">Send Mail</Button>
+              <Input type="email" id="email" placeholder="Enter your Password" />
+              </div>
             </Form>
+            <div className="btn flex flex-col items-center gap-4">
+                <Link to="/Forgot-password"><u> Forgot Password </u></Link>
+              <Button type="submit">Login</Button>
+              <Button type="submit" style={{backgroundColor: "#1c1c1c", color:"white"}}>Signup</Button>
+              </div>
+                <div className="cont-footer flex flex-col justify-center items-center pt-2">
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width:"45%"}}>
+                        <hr style={{ flex: 1, width:"50%", border: 'none', borderTop: '1px solid #ccc' }} />
+                        <span style={{ margin: '0 10px' }}>or Continue with</span>
+                <hr style={{ flex: 1, border: 'none', borderTop: '1px solid #ccc' }} />
+                </div>
+
+                <div className="flex items-center justify-center gap-5 p-5 pb-2">
+                    <img src={googleImg} alt="" className="h-[60px]"/>
+                    <img src={faceImg} alt="" className="h-[60px]" />
+                    <img src={appleImg} alt="" className="h-[60px]" />
+                </div>
+            </div>
           </ContentWrapper>
         </Box>
       </Container>
-      </>
+      
+        </>
   );
 };
 
-export default ForgotPasswordContent;
+export default Signup;

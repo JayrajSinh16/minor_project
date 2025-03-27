@@ -7,10 +7,9 @@ import ForgotPasswordContent from "../components/ForgotPage/ForgotPasswordCompon
 const Forgot = () => {
     return (
         <>
-            <br/>
-            <Navbar></Navbar>
+            
             <ForgotPasswordContent></ForgotPasswordContent>
-            <Footer></Footer>
+            
         </>
     );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/icons/logo.svg"; // Import your SVG logo
+import { Link, useNavigate } from "react-router";
 
 const NavbarContainer = styled.nav`
     display: flex;
@@ -24,7 +25,7 @@ const NavLinks = styled.div`
     font: inherit;
 `;
 
-const NavItem = styled.a`
+const StyledLink = styled(Link)`
     color: #FFFFFF;
     text-decoration: none;
     font: inherit;
@@ -50,20 +51,24 @@ const Button = styled.button`
         border: 1px solid #CAFF33;
     }
 `;
-
 const Navbar = () => {
+    const navigate = useNavigate();
+    const handleLogin = async()=>
+    {
+        navigate('/Login')
+    }
     return (
         <NavbarContainer>
             <Logo src={logo} alt="YourBank Logo"/>
             <NavLinks>
-                <NavItem href="#">Home</NavItem>
-                <NavItem href="#">Careers</NavItem>
-                <NavItem href="#">About</NavItem>
-                <NavItem href="#">Security</NavItem>
+                <StyledLink to="/" >Home</StyledLink>
+                <StyledLink to="/Careers">Careers</StyledLink>
+                <StyledLink to="/About">About</StyledLink>
+                <StyledLink to="/security">Security</StyledLink>
             </NavLinks>
             <div>
-                <NavItem href="#">Sign Up</NavItem>
-                <Button>Login</Button>
+                <StyledLink to="/Signup">Sign Up</StyledLink>
+                <Button onClick={handleLogin}>Login</Button>
             </div>
         </NavbarContainer>
     );
